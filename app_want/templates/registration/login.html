@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Login</title>
+    <style rel="stylesheet"> 
+            * { margin: 0; padding: 0; font-family:Tahoma; font-size:12pt;}
+            #diver { 
+                background-color: transparent; 
+                width: 350px; 
+                height: 150px; 
+                left: 43%; 
+                margin: -100px 0 0 -130px; 
+                padding:10px;
+                position: absolute; 
+                top: 32%; }
+            #divCenter { 
+                width: 320px; 
+                height: 90px; 
+                left: 47%; 
+                margin: -100px 0 0 -126px; 
+                padding: 2px;
+                position: absolute; 
+                top: 54%; }
+                
+            #diver2 { 
+                background-color: transparent; 
+                width: 300px; 
+                left: 0%;  
+                position: absolute; 
+                top: 15%; }
+            #divCenter2 { 
+                width: 300px; 
+                height: 90px; 
+                left: 8%; 
+                position: absolute; 
+                top: 34%; }
+             body { background-image: url("https://s.aficionados.com.br/imagens/os-25-animes-mais-assistidos-no-mundo-ate-agora_f.jpg"); background-repeat: no-repeat; background-attachment: fixed; background-position: center; background-size: cover; height: 100%; background-size: cover;}
+    </style>
+</head>
+
+<body>
+    <div class="d-none d-sm-block">
+        <div id="diver">
+            <a href="{% url 'inicial' %}">
+            <img width="400" src="/media/fotos/logo.png"> </a>
+        </div>
+        <div id="divCenter">
+            
+            <div class="card text-white bg-dark">
+                <div class="header">
+                <h4 style="padding-top: 3%; font-weight: 550; float:right; width: 60%">Login</h4>
+                </div>
+                <div class="card-body">
+                    <div id="login-row" class="row justify-content-center">
+                        <div id="login-row" class="col-md">
+                            
+                            <form action="." method="POST">
+
+                                <center>
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                </center>
+                                
+                                <center><h3><input style="font-weight: 550" class="btn btn-dark" value= "Entrar" type="submit">
+                                    <a style="font-weight: 550" href="{% url 'cadastrar' %}" class="btn btn-dark">Cadastrar</a></h3></center>
+                            </form>
+                        </div>
+                    </div>
+                            </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-block d-sm-none">
+        <div id="diver2">
+            <a href="{% url 'inicial' %}">
+            <img width="350" src="/media/fotos/logo.png"> </a>
+        </div>
+        <div id="divCenter2">
+            
+            <div class="card text-white bg-dark">
+                <div class="header">
+                <h4 style="padding-top: 3%; font-weight: 550; float:right; width: 60%">Login</h4>
+                </div>
+                <div class="card-body">
+                    <div id="login-row" class="row justify-content-center">
+                        <div id="login-row" class="col-md">
+                            
+                            <form action="." method="POST">
+
+                                <center>
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                </center>
+                                
+                                <center><h3><input style="font-weight: 550" class="btn btn-dark" value= "Entrar" type="submit">
+                                    <a style="font-weight: 550" href="{% url 'cadastrar' %}" class="btn btn-dark">Cadastrar</a></h3></center>
+                            </form>
+                        </div>
+                    </div>
+                            </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

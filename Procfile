@@ -1,0 +1,1 @@
+web: gunicorn hsanimes.wsgi
